@@ -20,8 +20,8 @@ export default {
         }
     },
     async mounted () {
-        const result_response = await axios.requestSearchChartData
-            (process.env.AVG_PATH, '0', this.device, 
+        const result_response = await axios.requestChartData
+            (process.env.AVG_PATH, 'AvgSearch', this.device, 
             this.p_date_type, this.p_start_date, this.p_end_date) ;
         
         this.renderChart({

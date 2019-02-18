@@ -20,8 +20,8 @@ export default {
         }
     },
     async mounted () {
-        const result_response = await axios.requestSearchChartData
-            (process.env.QM_PATH, '1', this.device, 
+        const result_response = await axios.requestChartData
+            (process.env.QM_PATH, 'QmSearch', this.device, 
             this.p_date_type, this.p_start_date, this.p_end_date) ;
         
         this.renderChart({
